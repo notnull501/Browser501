@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(
+			function() {
+				  var today = new Date();
+				  
+				  $("p").eq(0).text(today);
+							
+				  var year = today.getFullYear();
+				  $("p").eq(1).text(year);
+				  var month = today.getMonth()+1;
+				  $("p").eq(2).text(month);
+				  var date = today.getDate();
+				  $("p").eq(3).text(date);
+				  var day = today.getDay();
+				  $("p").eq(4).text(day);
+				
+				  var hours = today.getHours();
+				  $("p").eq(5).text(hours);
+				  var minutes = today.getMinutes();
+				  $("p").eq(6).text(minutes);
+				  var seconds = today.getSeconds();
+				  $("p").eq(7).text(seconds);
+			}
+	);
+
+</script>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+</body>
+</html>
