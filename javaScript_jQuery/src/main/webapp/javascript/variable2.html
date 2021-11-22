@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+type: undefined- 변수에 아무것도 등록되어 있지 않은 경우<br>
+      Null - 변수에 데이터가 null이 들어 있는 경우: 변수에 저장된 값을 비우고자 할때 사용<br>
+
+<script>
+    var box;
+    document.write(typeof(box)+"<br>");
+    box= 100;
+    document.write(typeof(box)+"<br>");
+    document.write(box+"<br>");
+    
+	var s= "javascript";
+	var num = "100";
+	var tag = "<h1>String</h1>";
+	document.write(typeof(s)+"<br>");
+	
+	var s = true;
+	document.write(typeof(s)+"<br>");
+	var k = Boolean("hello");
+	document.write(k+"<br>");
+	var m= Boolean(0);
+	document.write(m+"<br>");
+</script>
+
+</body>
+</html>
