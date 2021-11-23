@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for문을 사용한 4행 3열 테이블 만들기(숫자 데이터 포함)</title>
+</head>
+<body>
+<table border="1">
+	<tr><td>1</td><td>2</td><td>3</td></tr>
+	<tr><td>4</td><td>5</td><td>6</td></tr>
+	<tr><td>7</td><td>8</td><td>9</td></tr>
+	<tr><td>10</td><td>11</td><td>12</td></tr>
+</table>
+<hr>
+
+<!-- i=i+1; -->
+<!-- x = x+y; x += y -->
+
+
+<script>
+var num=1;
+var t = "<table border='1'>";
+  for(var i=0; i<4; i++){
+	  t=t+"<tr>";
+	  for(var j=0; j<3; j++){
+		  t=t+"<td>"+num+"</td>";
+		  num++;
+	  }
+	  t=t+"</tr>";
+  }
+  t=t+"</table>";//t += "</table>"
+document.write(t);
+</script>
+
+</body>
+</html>

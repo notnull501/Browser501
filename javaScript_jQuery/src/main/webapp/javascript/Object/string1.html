@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+문자 객체 생성<br>
+<script>
+ var t = new String("Hello Javascript");
+</script>
+<script>
+	var str = "Hello Thank you good luck to you";//문자 객체 생성
+	document.write(str.charAt(16)+"<br>");
+	document.write(str.indexOf("you")+"<br>");
+	document.write(str.indexOf("you",16)+"<br>");
+	document.write(str.lastIndexOf("you",25)+"<br>");
+	document.write(str.match("luck")+"<br>");//값
+	document.write(str.search("luck")+"<br>");//index
+	document.write(str.substring(6,12)+"<br>");//6~11 index
+	document.write(str.substr(21,4)+"<br>");//21~24 index
+</script>
+</body>
+</html>

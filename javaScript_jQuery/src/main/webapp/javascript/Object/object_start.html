@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+자바스크립트의 객체 개념<br>
+객체의 종류: (1) Built-in 객체: String,Date,Array,Math,,,,<br>
+          (2) Browser Object Model<br>
+          (3) Document Object Model<hr>
+
+<script>
+	var tv = new Object();
+	tv.color = "white";
+	tv.price = 30000;
+	tv.info = function() {
+		document.write("tv 색상: "+this.color, "<br>");
+		document.write("tv 가격: "+this.price, "<br>");
+	}
+	
+	var car = {
+			color:"black",
+	        price:50000,
+	        info: function() {
+	        	document.write("car 색상: "+this.color, "<br>");
+	    		document.write("car 가격: "+this.price, "<br>");
+			}			
+	};
+	document.write("=== 객체 메소드 호출1 =======","<br>");
+	tv.info();
+	document.write("=== 객체 메소드 호출2 =======","<br>");
+	car.info();
+</script>
+</body>
+</html>

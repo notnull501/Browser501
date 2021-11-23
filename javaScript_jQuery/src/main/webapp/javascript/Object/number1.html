@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+Number 객체: 표현 방법<br>
+<script>
+	var y  = new Number(123);
+	var y2 = 123;
+	
+	var num1 = 3.456789;
+	var num2 = 700000;
+	var num3 = "30.5px";
+	var num4 = 40;
+	
+	
+	document.write('표현가능한 가장 큰 수: '+Number.MAX_VALUE, "<br>")
+	document.write('숫자가 아닌 경우 표기: '+Number.NaN, "<br>");
+	document.write('무한대수 표기: '+Number.POSITIVE_INFINITY, "<br>");
+	document.write(num2.toExponential(1), "<br>");
+	document.write(num1.toFixed(2), "<br>");
+	document.write(num1.toPrecision(2), "<br>");
+	document.write(num1.toString(), "<br>");
+	document.write(num4.valueOf(), "<br>");
+	document.write(parseInt(num3), "<br>");//30
+	document.write(parseFloat(num3), "<br>");//30.5
+	
+	
+	let x = 123;
+	document.write(x.toString());
+	(123).toString();
+	(100 + 23).toString();
+	
+</script>
+
+</body>
+</html>
