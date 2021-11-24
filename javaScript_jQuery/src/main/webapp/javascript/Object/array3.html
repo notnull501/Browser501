@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	var num = ["사당","교대","방배","강남"];
+	document.write(num,",<br>");
+	document.write(typeof num,"<br>");
+	document.write("배열을 하나로 연결결합(-): "+num.join("-"),"<br>");
+	document.write("배열을 오름차순 나열: "+num.sort(),"<br>");
+	document.write("배열을 역으로 출력: "+num.reverse(),"<br>");
+	
+	var num1 = ["사당","교대","방배","강남"];
+	var num2 =["미금","정자","모란","수서"];
+	num1.splice(2,1,"서초","역삼");
+	document.write(num1,"<br>");
+	document.write(num1.slice(1,3));
+	num2.shift();
+	document.write(num2,"<br>");
+	num2.unshift("미금2");
+	document.write(num2,"<br>");
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+현재 날짜로 부터 연말까지 몇일이 남았는지 출력하기<br>
+<script>
+var t= new Date();
+var nowYear = t.getFullYear();
+var theDate = new Date(nowYear,11,31);
+var diffDate = theDate-t;
+document.write(diffDate);//ms
+var result = Math.ceil(diffDate/(60*60*24*1000));
+document.write('현재일로부터올해 말까지는 '+result +" 일 남았습니다.")
+
+</script>
+</body>
+</html>

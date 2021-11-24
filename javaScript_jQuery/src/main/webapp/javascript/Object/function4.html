@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	var num=0;//전역변수
+	
+	function testFnc(){
+		var a = 500;//지역변수
+		num++;
+		document.write(num,"<br>");
+		if(num == 10) return;
+		
+		testFnc();
+	}
+	document.write(num,"<br>");
+	//document.write(a,"<br>");
+	testFnc();
+	document.write(num,"<br>");
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+Date객체 : 반드시  var t = new Date();<br>
+String객체 var s = new String("홍길동");<!-- o --><br>
+String객체 var s2 = "홍길동";<!-- o --><hr>
+getYear(): Depreciate, 현재년-1900= 121<br>
+new Date()<br>
+new Date(year, month, day, hours, minutes, seconds, milliseconds)<br>
+new Date(milliseconds)<br>
+new Date(date string)<br>
+
+<script>
+var t = new Date();
+document.write(t.getFullYear(),"<br>");
+document.write(t.getMonth()+1,"<br>");
+document.write(t.getDate(),"<br>");
+document.write(t.getDay(),"<br>");
+
+var t2 = new Date(2020,4,31);
+document.write(t2.getFullYear(),"<br>");
+document.write(t2.getMonth()+1,"<br>");
+document.write(t2.getDate(),"<br>");
+document.write(t.getDay(),"<br>");
+</script>
+
+</body>
+</html>
