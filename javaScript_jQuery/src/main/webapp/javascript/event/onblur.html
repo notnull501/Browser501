@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+onblur:: 지정한 요소에 포커스가 다른 요소로 이동 되었을때 발생하는 이벤트<br>
+Enter your name: <input type="text" id="fname" onblur="myFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>

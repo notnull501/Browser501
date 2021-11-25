@@ -5,6 +5,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+EVENT:: 브라우저에서 방문객이 취하는 모든 동작을 이벤트<BR>
+이벤트 핸들러:: 이벤트가 발생 했을때 자바스크립트 실행문을 실행하는 것<BR>
+
+
 2가지 방식으로 click 이벤트와 mouseover이벤트를 등록시켜 배경색 바꾸기<br>
 <script>
 	var color=["white","yellow","aqua","purple"];
@@ -16,7 +20,7 @@
 			i=0;
 		//document.getElementsByTagName("body")[0].style.backgroundColor=color[i];
 		var bodyTag =document.getElementsByTagName("body")[0];
-		bodyTag.style.backgroundColor=color[i]
+		bodyTag.style.backgroundColor=color[i];
 	}
 	
 	window.onload = function() {

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//    이름,연락처에대한 유효성 검사
+//이름: 시작부터 끝까지 한글2~5
+//연락처:010,019,011 - 3~4 - 4
+	function submit_chk(myForm) {
+		var reg1 = /^[가-힣]{2,5}$/;
+		var reg2 = /^(010|011|02)\d{3,4}\d{4}$/;
+		
+		var name = myForm.user_name;
+		var tel = myForm.user_tel;
+		var result1 = reg1.test(name.value);
+		var result2 = reg2.test(tel.value);
+		
+		if(!result1){
+			alert("이름 입력이 잘못 되었습니다.");
+			name.value="";
+			name.focus();
+			return false;
+		}else if(!result2){
+			alert("연락처 입력이 잘못 되었습니다.");
+			tel.value="";
+			tel.focus();
+			return false;
+		}
+	}
+	//취소 버튼을 눌렀을때
+	function reset_chk(myForm) {
+		var result = confirm("정말로 회원가입을 취소 하시겠습니까?");
+		if(result) return false;
+	}
+</script>
+</head>
+<body onload="document.f1.user_name.focus();">
+<form action="#" method="post" name="f1" onsubmit="return submit_chk(this);" 
+                                         onreset="return reset_chk(this);">
+ <fieldset>
+ 	<legend>회원가입</legend>
+ 	<p>
+ 		<label for="user_name" id="user_name">이름</label>
+ 		<input type="text" name="user_name" id="user_name">
+ 	</p>
+ 	<p>
+ 		<label for="user_tel" >연락처</label>
+ 		<input type="text" name="user_tel" id="user_tel">
+ 	</p>
+ 	<p>
+ 		
+ 		<input type="submit" value="회원가입">
+ 		<input type="reset" value="가입취소">
+ 	</p>
+ </fieldset>
+
+</form>
+</body>
+</html>
