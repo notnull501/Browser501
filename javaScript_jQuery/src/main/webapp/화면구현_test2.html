@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.box > ul > li > p {color: orange;}
+	header .menu li:nth-child(2) {background: red;}
+	#wrap .content .prod {border: 3px dashed gray;}
+</style>
+</head>
+<body>
+1. .box > ul > li > p {color: orange;}<br>
+2. header .menu li:nth-child(2) {background: red;}<br>
+3. #wrap .content .prod {border: 3px dashed gray;}<br>
+<hr>
+
+<div class="box">
+    <ul>
+    	<li><p>aaaa</p></li>
+    	<li><p>bbbb</p></li>
+    	<li><ul>
+    	        <li><p>aaaa</p></li>
+    	        <li><p>bbbb</p></li>
+             </ul></li>
+    </ul>
+    <ul>
+    	<li><p>aaaa</p></li>
+    	<li><p>bbbb</p></li>
+    </ul>
+
+</div>
+<header>
+   <div class="menu">
+   	   <ul>
+   	   		<li>mmmmmmm</li>
+   	   		<li>mmmmmmm</li>
+   	   		<li>mmmmmmm</li>
+   	   		<li>mmmmmmm</li>
+   	   		<li>mmmmmmm</li>
+   	   		<li>mmmmmmm</li>
+   	   </ul>
+   </div> 
+</header>
+
+<div id="wrap">
+	<div class="content">
+		<div class="prod">
+		      <ul>
+   	   		<li>mmmmmmm</li>
+   	   		<li>mmmmmmm</li>
+   	   		<li>mmmmmmm</li>
+   	   		<li>mmmmmmm</li>
+   	   		<li>mmmmmmm</li>
+   	   		<li>mmmmmmm</li>
+   	   </ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

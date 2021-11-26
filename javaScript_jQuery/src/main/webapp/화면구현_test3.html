@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style>
+	.wrap {float: left}
+	.id {background:#F5F5F5}
+	.pwd {background:#F5F5F5}
+	.birth > input {width:90px}
+	</style>
+</head>
+<body>
+
+<form action="#">
+<div id="wrap">
+  <h3>*표시는 필수 입력 표시입니다.</h3>	
+  <label for="id">*ID</label><br>
+  <input type="text" id="id" name="id"  maxlength="14" required><br>
+  
+  <label for="name">*이름</label><br>
+  <input type="text" id="name" name="name" required ><br>
+  
+  <label for="pw">*비밀번호</label><br>
+  <input type="text" id="pw" name="pw" maxlength="15" required><br>
+  
+  <label for="pwCheck">*비밀번호확인</label><br>
+  <input type="text" id="pwCheck" name="pwCheck" maxlength="15" required><br>
+  
+  <label for="birthday">*생일</label><br>
+  <div class="birth">
+  <input type="number" id="birth1" name="birth1" maxlength="4">년
+  <input type="number" id="birth2" name="birth2" maxlength="2">월
+  <input type="number" id="birth3" name="birth3" maxlength="2">일<br>
+  </div> 
+  
+  <label for="email">*E-mail</label><br>
+  <input type="text" id="email" name="email">@<input type="text" id="domain" name="domain">
+  <input type="button" value="중복확인"><br>
+  
+  <label for="cell">*휴대폰</label><br>
+  <input type="text" id="cell" name="cell"><br>
+  
+  <label for="address">*주소</label><br>
+  <input type="text" id="address" name="address"><br>
+  
+  <label for="address2">*상세주소</label><br>
+  <input type="text" id="address2" name="address2"><br>
+  
+  <input type="submit" value="수정">
+  <input type="submit" value="목록">
+</div>
+</form>
+ 
+
+</body>
+</html>
