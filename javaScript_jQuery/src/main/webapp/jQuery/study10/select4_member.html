@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	*{padding:0; margin:0; box-sizing:border-box;}
+	body{border:1px solid blue; padding:10px; margin:10px; width:300px;}
+	.item{display: inline-block; width:90px; margin-bottom:10px;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#regBtn").click(function() {
+		invalidItem();
+	});
+	
+	function invalidItem() {
+		var user_id = $("#userId").val();
+		var user_name = $("#userName").val();
+		var pwd = $("#pwd").val();
+		var pwdChk = $("#pwdConfirm").val();
+			
+		if(user_id != ""){
+			if(user_name != ""){
+				   if(pwd != "" && pwdChk != ""){
+						if(pwd == pwdChk){
+								alert(user_name+"님 회원 가입을 축하합니다.");
+						        clearInput();
+						}else{
+							alert("비밀번호가 다릅니다.");
+							$("#pwdConfirm").focus();
+						}
+					
+				   }else{
+					   alert("비밀번호를 입력해주세요.");
+					   $("#pwd").focus();
+				   }	
+			}else{
+				alert("이름을 입력해주세요.");
+				$("#userName").focus();
+			}
+		}else{
+			console.log(user_id);
+			alert("아이디를 입력해주세요.");
+			$("#userId").focus();
+		}
+		
+	}
+	
+	function clearInput(){
+		$("input[type=text],input[type=password]").val("");
+	}
+});
+
+
+</script>
+
+</head>
+<body>
+    <form action="result.jsp" method="get">
+     <div> <span class="item"> 아이디 * </span> <input name="userId" id="userId" type="text"></div>
+     <div> <span class="item"> 이름   * </span> <input name="userName" id="userName" type="text"></div>
+     <div> <span class="item"> 암호   * </span> <input name="pwd" id="pwd" type="password"></div>
+     <div> <span class="item"> 암호 확인  * </span> <input id="pwdConfirm" type="password"></div>
+     <input type="submit" id="regBtn" value="회원가입">         
+   </form>
+</body>
+</html>

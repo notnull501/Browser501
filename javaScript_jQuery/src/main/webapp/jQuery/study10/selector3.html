@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>n번째로 일치하는 엘리먼트에 스타일 적용하기</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+//eq( )를 사용하여 css하기
+$(document).ready(function(){
+	$("td:eq(3)").css("backgroundColor","pink");
+});
+
+
+</script>
+</head>
+<body>
+   <table>
+      <tr><td>zero</td><td>one</td><td>two</td></tr>
+      <tr><td>three</td><td>four</td><td>five</td></tr>
+   </table>
+</body>
+</html>
