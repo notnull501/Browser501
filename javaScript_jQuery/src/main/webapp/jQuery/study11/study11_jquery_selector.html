@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 객체 조작 및 생성 </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(function(){
+//(1) h1 태그의 align 속성값을 left적용하기
+$("h1").attr("align","left");
+//(2): li태그중 첫번째 요소에 텍스트를 새 텍스틀 바꾸기
+ $("li:first").text("첫번째 리스트"); 
+//(3)h2태그에 자식 요소인 strong태그의 글자를 빨간색으로 적용
+$("h2 > strong").css("color","red");
+//(4)id=two인 요소의 이전 요소에 글자를 파란색으로 적용
+$("#two").prev().css("color","blue");  
+//(5)id=two인 요소의 다음에요소에 글자를 보라색으로 적용
+$("#two").next().css("color","purple"); 
+//(6)id=two인 요소의 부모 요소에 파선을 생성
+$("#two").parent().css("border","2px dashed navy");
+//(7)class=myList인 요소내의 가장 앞의 위치에 새요소를 추가
+$(".myList").prepend("<li>Front</li>");
+//(8)class=myList인 요소내의 마지막 위치에 새요소를 추가
+$(".myList").append("<li>back</li>");
+//(9)class=three인 요소의 이전 위치에 새요소를 생성
+$("<li>뒤에 삽입</li>").insertBefore(".three");
+//(10)class=three인 요소의 다음 위치에 새 요ㅗ를 생성
+$("<li>앞에 삽입</li>").insertAfter(".three");
+//(11)h2태그중에 2번째 요소를 <div>태그로 감싸기
+$("h2").eq(1).wrap("<div>");
+//(12)h2태그중에 하위 요소를 strong태그를 포함하는 <h2>에 class="tit"속성 추가
+$("h2:has('strong')").addClass("tit");
+//(13)h2태그중에 마지막 요소에 class="tit"속성을 제거
+$("h2:last").removeClass("tit");
+});
+</script>
+<style>
+   div{background-color:yellow;}
+   .tit{background-color:orange;}
+</style>
+</head>
+<body>
+  <h1 align="center"><strong>내용1</strong></h1>
+  <h2><strong>내용2</strong></h2>
+  <h2>내용3</h2>
+  <h2 class="tit">내용4</h2>
+  <ul class="myList">
+    <li>리스트1</li>
+    <li id="two">리스트2</li>
+    <li class="three">리스트3</li>
+    <li>리스트4</li>
+  </ul>
+</body>
+</html>

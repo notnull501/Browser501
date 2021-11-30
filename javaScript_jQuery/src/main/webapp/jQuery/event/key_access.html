@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<title>키보드 접근성</title>
+<script>
+	$(function() {
+		$("#btn1").mouseover(function() {
+			alert("good");
+		});
+		
+		// 마우스, 키보드 접근성
+		$("#btn2").on("mouseover focus",function(){
+			alert("hello");
+		});	
+	});
+</script>
+</head>
+<body>
+<p><a href="#" id= "btn1">버튼1</a></p>
+<p><a href="#" id= "btn2">버튼2</a></p>
+</body>
+</html>

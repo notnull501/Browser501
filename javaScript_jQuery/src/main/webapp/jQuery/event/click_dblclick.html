@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function() {
+		$("#btn1").click(function() {
+			$("p").css("background-color","yellow");
+		});
+		
+		$("#btn2").dblclick(function() {
+			$("p").css("background-color","purple");
+		});
+		
+		$("#btn2").dblclick();//강제로 dblclick 이벤트 발생
+	});
+</script>
+</head>
+<body>
+	<button id= "btn1">click(background:yellow)</button><br>
+	<button id= "btn2">dblclcick(background: purple)</button>
+	<p>내용.....</p>
+</body>
+</html>

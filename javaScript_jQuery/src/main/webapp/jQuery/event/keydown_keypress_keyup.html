@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function() {
+		$("#user_id").keydown(function(e) {
+			$(this).css("background-color","purple");
+			$("#txt1").text(e.keyCode);
+		});
+		$("#user_id").keypress(function(e) {
+			$("#txt2").text(e.keyCode);
+		});
+		
+		
+		$("#user_id").keyup(function() {
+			$(this).css("background-color","yellow");
+		});
+	});
+</script>
+</head>
+<body>
+keydown: 키보드 자판을 눌렀을때, 고유키 값을 출력: 모두 가능<br>
+keypress:키보드 자판을 눌렀을때, 고유키 값을 출력: 문자는 받아 오지 못한다<br>
+keyup: 자판을 눌렀다 띄었을때 발생하는 이벤트<br>
+<p><input type="text" name="user_id" id="user_id"></p>
+<p id="txt1"></p>
+<p id="txt2"></p>
+</body>
+</html>

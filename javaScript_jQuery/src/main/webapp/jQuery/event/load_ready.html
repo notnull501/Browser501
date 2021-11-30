@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<title>Loading Event</title>
+</head>
+<body>
+load:src에 연동된 이미지,프레임이 로딩 완료된후 함수 실행<br>
+ready: html문서 객체가 로딩이 완료된후에 function실행.<br><hr>
+<div id="wrap"></div>
+<iframe src="http://www.nate.com" width="300" height="200"></iframe>
+<script>
+	$("iframe").load(function() {
+		$("#wrap").append("<p>로딩완료</p>");
+	});
+	
+	$(document).ready(function() {
+		$("#wrap").append("<p>레디완료</p>");
+	});
+</script>
+</body>
+</html>
