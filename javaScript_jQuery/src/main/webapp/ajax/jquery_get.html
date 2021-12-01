@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	td{border:1px solid gray;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function() {
+		$.get('source/item.xml',function(data){
+			$("#treeData").append("<tr><td>id</td><td>name</td><td>price</td><td>description</td></tr>");
+			$(data).find("item").each(function() {
+				var $item = $(this);
+				$("#treeData").append("<tr><td>"
+						+$item.attr("id")+"</td><td>"
+						+$item.attr("name")+"</td><td>"
+						+$item.find("price").text()+"</td><td>"
+						+$item.find("description").text()+"</td></tr>");
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<table id="treeData"></table>
+</body>
+</html>
