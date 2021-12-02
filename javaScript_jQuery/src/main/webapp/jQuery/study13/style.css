@@ -1,0 +1,33 @@
+table, td, th {
+	color: white;
+    text-align: center;
+    background-color: #323232;
+	border: 1px solid #595959;
+	border-collapse : collapse;
+}
+
+td {
+    width:50px;
+    height:50px;
+}
+
+thead.cal_yyyymm th {
+	font-size: 1.5em;
+    color: #FFB900;
+}
+
+thead.cal_week th{
+	height:50px;
+    color: white;
+}
+
+tfoot.cal_move th{
+	height:50px;
+    color: white;
+    cursor: pointer;
+}
+.prev:hover,.next:hover { color: #2693C4; }
+
+tbody td:nth-child(1), thead.cal_week th:nth-child(1) {
+    color: red;
+}
