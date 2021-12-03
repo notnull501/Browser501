@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+//1.annotation 방식-권장사항
 @WebServlet("/ch02_start/Start")
 public class Start extends HttpServlet {
 	private static final long serialVersionUID = 1L;
