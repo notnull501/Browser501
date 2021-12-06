@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
+//MVC:: Controller
 @WebServlet("/login/login_mvc2")
 public class LoginServlet_MVC2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,12 +24,14 @@ public class LoginServlet_MVC2 extends HttpServlet {
 		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
+		
 		PrintWriter out = response.getWriter();
 		
 		if(id.equals("admin") && pw.equals("1234")) {
 			HttpSession session = request.getSession();
 		    session.setAttribute("ids", id);
 		    session.setAttribute("pws", pw);
+		    
 		 	RequestDispatcher d = request.getRequestDispatcher("../loginout/logout_mvc2.jsp");
 		    d.forward(request, response);
 		}else {
