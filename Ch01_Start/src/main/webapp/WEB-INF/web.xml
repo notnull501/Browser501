@@ -25,4 +25,49 @@
     <servlet-name>ServletTest2</servlet-name>
     <url-pattern>/study02/SportXml</url-pattern>
   </servlet-mapping>
+  
+  <context-param>
+  	<description>로깅 여부</description>
+  	<param-name>logEnabled</param-name>
+  	<param-value>true</param-value>
+  </context-param>
+  
+  <context-param>
+  	<description>디버깅 레벨</description>
+  	<param-name>debugLevel</param-name>
+  	<param-value>5</param-value>
+  </context-param> 
+  
+   <servlet>
+    <servlet-name>InitParam</servlet-name>
+    <servlet-class>servlet.InitParamServlet</servlet-class>
+    <init-param>
+    	<param-name>dirPath</param-name>
+    	<param-value>c:\\test</param-value>
+    </init-param>
+    <init-param>
+    	<param-name>userid</param-name>
+    	<param-value>admin</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitParam</servlet-name>
+    <url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  
+  
+ <error-page>
+ 	<error-code>404</error-code>
+ 	<location>/error/error404.jsp</location>
+ </error-page> 
+ <error-page>
+ 	<error-code>500</error-code>
+ 	<location>/error/error500.jsp</location>
+ </error-page> 
+  
+  <error-page>
+  	<exception-type>java.lang.NullPointerException</exception-type>
+  	<location>/error/errorNullPointer.jsp</location>
+  </error-page>
+  
 </web-app>
