@@ -90,5 +90,23 @@
     <url-pattern>/pinfo</url-pattern>
   </servlet-mapping>
    
+   <servlet>
+    <servlet-name>Animal-Servlet</servlet-name>
+    <servlet-class>ch10_session.AnimalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Animal-Servlet</servlet-name>
+    <url-pattern>/ch10_session/study10/animal</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>Result-Servlet</servlet-name>
+    <servlet-class>ch10_session.ResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Result-Servlet</servlet-name>
+    <url-pattern>/ch10_session/study10/result</url-pattern>
+  </servlet-mapping>
+   
    
 </web-app>
