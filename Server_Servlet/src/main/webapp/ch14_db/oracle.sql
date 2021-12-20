@@ -7,3 +7,4 @@ create table member(
 );
 
 insert into  member values('google','1234,'hong','hong@hong.com');
+commit;
