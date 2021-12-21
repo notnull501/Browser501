@@ -7,6 +7,7 @@ import java.sql.Statement;
 
 //434
 public class JdbcUtil {
+	//Method overloading
 	
 	public static void close(ResultSet rs) {
 		if (rs != null) {

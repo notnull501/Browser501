@@ -28,8 +28,8 @@ public class GetMessageListService {
 		Connection conn = null;
 		int currentPageNumber = pageNumber;
 		try {
-			conn = ConnectionProvider.getConnection();
-			MessageDao messageDao = MessageDao.getInstance();
+			conn = ConnectionProvider.getConnection();//객체생성
+			MessageDao messageDao = MessageDao.getInstance();//객체생성
 			
 			int messageTotalCount = messageDao.selectCount(conn);
 

@@ -58,7 +58,7 @@ public class MessageDao {
 	}
 //ResultSet에서데이터를 읽어와서 메시지 생성: select(), selectLIst() 에서 사용됨
 	private Message makeMessageFromResultSet(ResultSet rs) throws SQLException {
-		Message message = new Message();
+		Message message = new Message();//DTO
 		message.setId(rs.getInt("message_id"));
 		message.setGuestName(rs.getString("guest_name"));
 		message.setPassword(rs.getString("password"));
@@ -79,7 +79,7 @@ public class MessageDao {
 			JdbcUtil.close(stmt);
 		}
 	}
-    //한페이지의 메시지
+    //한 페이지의 메시지
 	public List<Message> selectList(Connection conn, int firstRow, int endRow) 
 			throws SQLException {
 		PreparedStatement pstmt = null;

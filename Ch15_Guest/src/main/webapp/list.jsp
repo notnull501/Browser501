@@ -11,7 +11,7 @@
 	}
 
 	GetMessageListService messageListService = GetMessageListService.getInstance();
-	MessageListView viewData = messageListService.getMessageList(pageNumber);
+	MessageListView viewData = messageListService.getMessageList(pageNumber);//1
 %>
 <c:set var="viewData" value="<%= viewData %>"/>
 <html>
