@@ -25,7 +25,13 @@
   	<load-on-startup>1</load-on-startup>
   </servlet>
   
-  
-  
+  <filter>
+  	<filter-name>encodingFilter</filter-name>
+  	<filter-class>ch19_filter.MFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>encodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
   
 </web-app>

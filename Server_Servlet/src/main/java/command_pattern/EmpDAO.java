@@ -1,7 +1,6 @@
-package ch18.mvc.dao;
+package command_pattern;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,22 +11,19 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import ch18.mvc.vo.EmpDTO;
-
 public class EmpDAO {
 		
-	DataSource ds;
+	DataSource dataFactory;
 
 	public EmpDAO() {
-		
 		try {
-			Context initContext = new InitialContext();
-			Context envContext  = (Context)initContext.lookup("java:/comp/env");
-			ds = (DataSource)envContext.lookup("jdbc/OracleDB");
 			
+				Context ctx = new InitialContext();
+			    dataFactory = (DataSource) ctx.lookup("java:comp/env/jdbc/OracleDB");
+
 		} catch (NamingException e) {
 			
-		} 
+		}
 	}
 	
 	//empno, ename, sal, deptno
@@ -38,9 +34,8 @@ public class EmpDAO {
 		 ResultSet rs = null;
 		
 		 try {
-			 con = ds.getConnection();
 			String sql = "select empno,ename,sal,deptno from emp";
-			
+                con = dataFactory.getConnection();
 				pstmt= con.prepareStatement(sql);
 				rs = pstmt.executeQuery();
 				while(rs.next()) {
