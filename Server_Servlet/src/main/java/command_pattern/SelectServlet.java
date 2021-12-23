@@ -28,7 +28,7 @@ public class SelectServlet extends HttpServlet {
 				System.out.println("getContextPath():: "+contextPath);
 				String command = requestURI.substring(contextPath.length());
 				System.out.println("command:: "+command);
-				
+//Command Pattern :각 명령어에 해당하는 로직 처리 코드를 별도 클래스로 작성 하는것(529~530)				
 				if(command.equals("/insert.ds")) {
 					System.out.println("DB에 데이터 입력");	
 				}else if(command.equals("/delete.ds")) {

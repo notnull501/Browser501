@@ -19,8 +19,8 @@
   	<param-value>
   		jdbcdriver=oracle.jdbc.driver.OracleDriver
   		jdbcUrl = jdbc:oracle:thin:@localhost:1521:orcl
-		dbUser = jsp
-		dbPass = jsp
+		dbUser = bbs
+		dbPass = bbs
 		validationQuery=select 1 from dual
   		minIdle=3
   		maxTotal=30
