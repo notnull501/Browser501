@@ -2,13 +2,10 @@ package member.model;
 
 import java.util.Date;
 
-//591
 public class Member {
-	private String id;
-	private String name;
-	private String password;
+	private String id, name, password;
 	private Date regDate;
-	
+
 	public Member(String id, String name, String password, Date regDate) {
 		super();
 		this.id = id;
@@ -32,8 +29,12 @@ public class Member {
 	public Date getRegDate() {
 		return regDate;
 	}
-	
+
 	public boolean matchPassword(String pwd) {
 		return password.equals(pwd);
+	}
+
+	public void changePassword(String newPwd) {
+		this.password = newPwd;
 	}
 }

@@ -15,13 +15,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import mvc.command.CommandHandler;
 import mvc.command.NullHandler;
-
+//ControllerUsingFile 단점: ?cmd=hello
+//보완 => ControllerUsingURI : 확장자 패턴 사용(main.do)
+//http://localhost:8080/Server_Servlet/controllerUsingFile?cmd=hello
 public class ControllerUsingURI extends HttpServlet {
+	
+	
 	private static final long serialVersionUID = 1L;
 	// Map<커맨드, 핸들러인스턴스> 매핑 정보 저장
     private Map<String, CommandHandler> commandHandlerMap = 
     		new HashMap<>();
 
+    //1
     //아래 init()파라미터가 없는 일반 메소드임
     public void init() throws ServletException {
         String configFile = getInitParameter("configFile");///WEB-INF/commandHandlerURI.properties
@@ -55,7 +60,7 @@ public class ControllerUsingURI extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         process(request, response);
     }
-
+//2
     private void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String command = request.getRequestURI();
 		System.out.println("command1: "+command);///Server_Servlet/*.dodo

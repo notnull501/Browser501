@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>서버의 데이터를 대상 엘리먼트에 삽입하기</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(function() {	
+	$('button').click(function() {
+		$('#container').load('resource.html');
+	});   
+});
+</script>
+</head>
+<body>
+	<button> 서버로부터 데이터 가져오기 </button>
+	<br><br>
+	<div id="container"> 데이터 가져오기 전 </div>
+</body>
+</html>

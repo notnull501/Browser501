@@ -1,19 +1,18 @@
-package jdbc.connection;
+package jdbc;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-//434
 public class JdbcUtil {
-	//Method overloading
-	
+
 	public static void close(ResultSet rs) {
 		if (rs != null) {
 			try {
 				rs.close();
-			} catch (SQLException ex) {
+			} catch (SQLException e) {
 			}
 		}
 	}
@@ -22,7 +21,16 @@ public class JdbcUtil {
 		if (stmt != null) {
 			try {
 				stmt.close();
-			} catch (SQLException ex) {
+			} catch (SQLException e) {
+			}
+		}
+	}
+
+	public static void close(PreparedStatement pstmt) {
+		if (pstmt != null) {
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
 			}
 		}
 	}
@@ -31,7 +39,7 @@ public class JdbcUtil {
 		if (conn != null) {
 			try {
 				conn.close();
-			} catch (SQLException ex) {
+			} catch (SQLException e) {
 			}
 		}
 	}
@@ -40,7 +48,7 @@ public class JdbcUtil {
 		if (conn != null) {
 			try {
 				conn.rollback();
-			} catch (SQLException ex) {
+			} catch (SQLException e) {
 			}
 		}
 	}
